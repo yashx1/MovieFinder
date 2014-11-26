@@ -1,0 +1,65 @@
+<div class="header row">
+    <div class="col-lg-6">
+        <h3 class="text-muted">Movie Finder</h3>
+    </div>
+
+    <div class="input-group col-lg-6 col-lg-offset-6">
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-search"></span>
+				</span>
+        <input type="text" class="form-control" placeholder="Search Movie By Title" ng-model="searchText" ng-change="findMovie()"/>
+    </div>
+</div>
+<br/>
+<div class="container jumbotron" ng-show="isDataAvailable" id="ifDataAvailable">
+
+    <div class="col-lg-3 col-sm-3">
+        <img style="width: 100%;" alt="Movie Poster" src="{{searchResult.Poster}}"/>
+        <br/>
+        <br/>
+    </div>
+
+    <div class="col-lg-9 col-sm-9" style="text-align: left;">
+        <label class="control-label">Actors : </label> {{searchResult.Actors}}
+        <br/>
+        <label class="control-label">Awards : </label> {{searchResult.Awards}}
+        <br/>
+        <label class="control-label">Country : </label> {{searchResult.Country}}
+        <br/>
+        <label class="control-label">Director : </label> {{searchResult.Director}}
+        <br/>
+        <label class="control-label">Genre : </label> {{searchResult.Genre}}
+        <br/>
+        <label class="control-label">Language : </label> {{searchResult.Language}}
+        <br/>
+        <label class="control-label">Metascore : </label> {{searchResult.Metascore}}
+        <br/>
+        <label class="control-label">Plot : </label> {{searchResult.Plot}}
+        <br/>
+        <label class="control-label">Rated : </label> {{searchResult.Rated}}
+        <br/>
+        <label class="control-label">Released : </label> {{searchResult.Released}}
+        <br/>
+        <label class="control-label">Response : </label> {{searchResult.Response}}
+        <br/>
+        <label class="control-label">Runtime : </label> {{searchResult.Runtime}}
+        <br/>
+        <label class="control-label">Title : </label> {{searchResult.Title}}
+        <br/>
+        <label class="control-label">Type : </label> {{searchResult.Type}}
+        <br/>
+        <label class="control-label">Writer : </label> {{searchResult.Writer}}
+        <br/>
+        <label class="control-label">Year : </label> {{searchResult.Year}}
+        <br/>
+        <label class="control-label">IMDB ID : </label> {{searchResult.imdbID}}
+        <br/>
+        <label class="control-label">IMDB Rating : </label> {{searchResult.imdbRating}}
+        <br/>
+        <label class="control-label">IMDB Votes : </label> {{searchResult.imdbVotes}}
+    </div>
+</div>
+
+<div class="container jumbotron" ng-show="!isDataAvailable" id="ifDataAvailable">
+    <span style="color: red;">No data available. Try again.</span>
+</div>
